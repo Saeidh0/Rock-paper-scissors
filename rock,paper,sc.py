@@ -1,79 +1,54 @@
 import random
 
-# code rework
-# add out of 3 to the game
-# add out of 5 to the game
-# add a summary function for out of three and out of five functions
 
 def logic():
    
     option=['rock', 'paper', 'scissors']
     while True:
-        users_input= input('\nType Rock/Paper/Scissors\n').lower()
+        users_input= input('\nType Rock/Paper/Scissors\n').lower().strip()
         if users_input not in option:
             print ('Invalid input.')
         else:
             break    
 
     computer_pick = random.choice(option)
-    print('computer pick', computer_pick + '.')
+    print('computer pick', computer_pick + '.\n')
 
     if users_input == computer_pick:
-        print('tie')
+        print('>>>[ tie ]<<<')
         return 'tie'
     else:
         if users_input == 'rock' and computer_pick == 'scissors':
-            print('YOU win!')
+            print('>>>[ YOU win! ]<<<')
             return 'player'
         elif users_input == 'scissors' and computer_pick == 'paper':
-            print('YOU win!')
+            print('>>>[ YOU win! ]<<<')
             return 'player'
         elif users_input == 'paper' and computer_pick == 'rock':
-            print('YOU win!')
+            print('>>>[ YOU win! ]<<<')
             return 'player'
         else:
-            print('YOU lost')
+            print('>>>[ YOU lost ]<<<')
             return 'computer'
+
+def round(number_of_rounds):
+    user_wins = 0
+    computer_wins = 0
+    tie = 0
+
+    for i in range(number_of_rounds):
+        print(f'\nRound {i+1}:')
+        win = logic()
+
+        if win == 'player':
+            user_wins +=1
+        elif win == 'computer':
+            computer_wins +=1
+        else:
+            tie +=1
+
+    summary(user_wins,computer_wins,tie)
         
-    #since the single round is the logic code that run just once
-    # there is no need to do :
-    # def single round()
-        #logic()    ==> instade you can just put logic as argumnet in menu input.
-
-def out_of_three():
-    user_wins = 0
-    computer_wins = 0
-    tie = 0
-    for _ in range(3):
-        win = logic()
-
-        if win == 'player':
-            user_wins +=1
-        elif win == 'computer':
-            computer_wins +=1
-        else:
-            tie +=1
-    # no need to return anything. just call the funciton.=>summary()
-    summary(user_wins,computer_wins,tie)
-         
-    
-def out_of_five():
-    user_wins = 0
-    computer_wins = 0
-    tie = 0
-    for _ in range(5):
-        win = logic()
-
-        if win == 'player':
-            user_wins +=1
-        elif win == 'computer':
-            computer_wins +=1
-        else:
-            tie +=1
-    # no need to return anything. just call the funciton.=>summary()
-    summary(user_wins,computer_wins,tie)
-
-
 def summary(user_wins,computer_wins, tie):
     print('\n-----------[ summary ]------------')
     print('Your wins:', user_wins,)
@@ -81,8 +56,7 @@ def summary(user_wins,computer_wins, tie):
     print('ties:', tie )
     print('------------------------------------')
 
-# start using functions :
-def menu (logic, out_of_three, out_of_five):
+def menu ():
     while True:
         print('\n ======[ Menu ]======')
         print('1. Single round')
@@ -95,9 +69,9 @@ def menu (logic, out_of_three, out_of_five):
         if menu_choice == '1':
             logic()
         elif menu_choice == '2':
-            out_of_three()
+            round(3)
         elif menu_choice == '3':
-            out_of_five()
+            round(5)
         elif menu_choice == '4':
             break
         else:
@@ -106,15 +80,9 @@ def menu (logic, out_of_three, out_of_five):
         
 
 
-
+'''
 def main():
-    # this is to print the menu
-    menu(logic, out_of_three, out_of_five)
 
+   menu()
 
-
-    
-
- 
-
-main()
+main()'''
