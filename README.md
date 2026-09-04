@@ -123,11 +123,11 @@ Rather than stopping once I had a working Rock, Paper, Scissors game, I kept ask
 This project is a snapshot of my early journey learning Python and my first experience turning a simple idea into something I could continuously improve.
 
  Screenshots
-Console Version
+Console Version <img width="922" height="998" alt="terminal snapshot" src="https://github.com/user-attachments/assets/2b10ee4e-ebff-46ad-b7bd-f11600d51a00" />
+
  
 2D GUI Version
-Add screenshots of the graphical version here.
-About
+
 This is one of my first Python projects and part of my journey into programming and software development.
 I'm continuing to learn, experiment, and build new projects as I develop my skills.
 Thanks for checking it out! 
