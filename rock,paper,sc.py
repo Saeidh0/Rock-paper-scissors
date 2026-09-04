@@ -1,5 +1,32 @@
 import random
+import pygame
+import sys
 
+
+pygame.init()
+
+pygame.display.set_caption('Rock, Paper, Scissors')
+
+icon = pygame.image.load('paw.png')
+pygame.display.set_icon(icon)
+
+
+screen_size = pygame.display.set_mode((800,500))
+background = pygame.image.load("background.jpg").convert()
+background = pygame.transform.scale(background,(800,500))
+
+
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    screen_size.blit(background,(0,0))
+
+# other objects should be here i.e. player, enemy. so it be at top of backgornd===========
+
+    pygame.display.flip()
 
 def logic():
    
@@ -73,16 +100,16 @@ def menu ():
         elif menu_choice == '3':
             round(5)
         elif menu_choice == '4':
-            break
+            sys.exit()
         else:
             print('invalid input')
 
-        
-
-
-'''
 def main():
 
    menu()
 
-main()'''
+main()
+
+#clean up and exit
+pygame.quit()
+sys.exit()
