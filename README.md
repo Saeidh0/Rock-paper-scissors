@@ -1,6 +1,9 @@
 Rock, Paper, Scissors 
 I started this project as a simple Rock, Paper, Scissors game while learning the fundamentals of Python. What started as a small console game quickly turned into a much bigger project as I kept experimenting, adding features, and challenging myself to improve it.
 I started with randomization, user input, loops, and conditional statements, then gradually introduced functions, menus, and finally a 2D graphical interface using pygame.
+Working with Pygame was a challenge on its own. Since I was completely new to it, understanding all the different concepts felt overwhelming at first. However, I didn’t let that stop me from reaching my goal. With every new idea I came up with, I found myself researching, experimenting, and figuring out how to bring it into my project. 
+Overall, this experience taught me a lot and made me more confident in my ability to learn and create.
+
 This project is a snapshot of my early journey with Python and my experience turning a simple idea into a more complete interactive application.
 Features
  Beginner Version
@@ -23,12 +26,10 @@ As I became more comfortable with Python, I expanded the project with:
 2D GUI Version
 The project eventually evolved from a terminal-based game into a 2D graphical interface.
 The GUI version includes:
-•	Interactive buttons
-•	Graphical Rock, Paper, Scissors choices
-•	Visual game feedback
+•	Interactive user input
+•	working with pygame input and print function
 •	Score display
 •	Interactive menus
-•	A more user-friendly experience
 Project Evolution
 One of the main goals of this project was not just to make a game, but to use it as a way to learn and practice new programming concepts.
 Version 1 — The Basics
@@ -94,7 +95,7 @@ I also learned how to think about:
 GUI Development
 Moving from the terminal to a graphical interface introduced me to:
 •	GUI components
-•	Buttons and menus
+•	input text box and menus
 •	Event-driven programming
 •	Connecting user actions to game logic
 •	Designing a more interactive user experience
@@ -109,7 +110,7 @@ Console Version
 6.	Keep playing and try to beat computer!
 GUI Version
 1.	Launch the application.
-2.	Choose Rock, Paper, or Scissors.
+2.	Type Rock, Paper, or Scissors.
 3.	The computer will make its move.
 4.	Check the result and try again!
  Technologies
