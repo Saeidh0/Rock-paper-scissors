@@ -3,14 +3,15 @@ import sys
 import pygame
 
 
-#keep the game logic for 2d version
-#change the input and print sturacture based on pygame methods and functions
-
+# add transparancy
+# GUI improvment
 pygame.init()
 
 screen_size = pygame.display.set_mode((800,500))
-pygame.display.set_caption('Rock, Paper, Scissors')
+#transparency
+transparency = pygame.Surface((300,38), pygame.SRCALPHA)#surface(width,height) of the area we want transperent
 
+pygame.display.set_caption('Rock, Paper, Scissors')
 icon = pygame.image.load('paw.png')
 pygame.display.set_icon(icon)
 
@@ -100,7 +101,7 @@ def main():
     computer_wins = 0
     tie =0
 
-    input_box = pygame.Rect(250,110,300,40)
+    input_box = pygame.Rect(245,110,300,40)
 
     while running:
         for event in pygame.event.get():
@@ -139,31 +140,36 @@ def main():
         pygame.draw.rect(screen_size,(255,255,255), input_box, border_radius=15)
         
 # user input
-        text = font.render(user_input,True, (0,0,0))
+        text = font.render(user_input,True, (101,50,25))
         screen_size.blit(text,(input_box.x +10 , input_box.y +10))
 
 # user input choice 
         user_ch_rect = pygame.Rect(50,400,300,38)
-        pygame.draw.rect(screen_size,(95,158,190), user_ch_rect, border_radius=15)
+#        pygame.draw.rect(screen_size,(95,158,190), user_ch_rect, border_radius=15)
+        pygame.draw.rect(transparency,(95,158,190,180), transparency.get_rect(),border_radius=15)#for transparency
+        screen_size.blit(transparency,user_ch_rect)
         user_text = font.render(f'You choose: {user_pick}', True, (250,250,250))
         screen_size.blit(user_text,(user_ch_rect.x +10, user_ch_rect.y +10))
 
 #instruction 
         instruction = font.render('Type rock, paper, or scissors and press enter: ',
-        True, (139,69,19))
+        True, (101,50,25))
         screen_size.blit (instruction,(180,80))
 
 # computer chice
         com_ch_rect = pygame.Rect(445,400,300,38)
-        pygame.draw.rect(screen_size,(240,128,128), com_ch_rect, border_radius =15)
+        #pygame.draw.rect(screen_size,(240,128,128), com_ch_rect, border_radius =15)
+        pygame.draw.rect(transparency,(240,128,128,180), transparency.get_rect(), border_radius = 15)
+        screen_size.blit(transparency,com_ch_rect)
         computer_text = font.render(f'Computer choose: {computer_pick}', True, (250,250,250))
         screen_size.blit(computer_text,(com_ch_rect.x +10, com_ch_rect.y +10))
 
-# result text background
+# result background
         result_background = pygame.Rect(250,450,300,38)
-        pygame.draw.rect(screen_size,(107,142,50), result_background,border_radius = 15)
-
-#Result
+        #pygame.draw.rect(screen_size,(107,142,50), result_background,border_radius = 15)
+        pygame.draw.rect(transparency,(107,142,50,180), transparency.get_rect(), border_radius = 15)
+        screen_size.blit(transparency,result_background)
+#Result text
         result_text = font.render(result,True,(250,250,250),None)
         text_rect = result_text.get_rect(center = result_background.center)
         screen_size.blit(result_text,text_rect)
