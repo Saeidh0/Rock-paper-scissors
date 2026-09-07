@@ -126,7 +126,6 @@ This project is a snapshot of my early journey learning Python and my first expe
  Screenshots
 Console Version <img width="922" height="998" alt="terminal snapshot" src="https://github.com/user-attachments/assets/2b10ee4e-ebff-46ad-b7bd-f11600d51a00" />
 
-
 This is one of my first Python projects and part of my journey into programming and software development.
 I'm continuing to learn, experiment, and build new projects as I develop my skills.
 Thanks for checking it out! 
