@@ -1,3 +1,4 @@
+
 Rock, Paper, Scissors 
 I started this project as a simple Rock, Paper, Scissors game while learning the fundamentals of Python. What started as a small console game quickly turned into a much bigger project as I kept experimenting, adding features, and challenging myself to improve it.
 I started with randomization, user input, loops, and conditional statements, then gradually introduced functions, menus, and finally a 2D graphical interface using pygame.
@@ -125,7 +126,7 @@ This project is a snapshot of my early journey learning Python and my first expe
 
  Screenshots
 Console Version <img width="922" height="998" alt="terminal snapshot" src="https://github.com/user-attachments/assets/2b10ee4e-ebff-46ad-b7bd-f11600d51a00" />
-
+2d version <img width="1598" height="1064" alt="2d_sample" src="https://github.com/user-attachments/assets/b9cdf8e1-aeac-4849-b171-7ba7861a7418" />
 This is one of my first Python projects and part of my journey into programming and software development.
 I'm continuing to learn, experiment, and build new projects as I develop my skills.
 Thanks for checking it out! 
