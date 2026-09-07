@@ -3,7 +3,6 @@ import sys
 import pygame
 
 
-# add transparancy
 # GUI improvment
 pygame.init()
 

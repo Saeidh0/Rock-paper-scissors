@@ -1,0 +1,59 @@
+[33mtag v1.0[m
+Tagger: Saeid Anwari <malizai71011@gmail.com>
+Date:   Tue Sep 1 15:47:24 2026 -0400
+
+1st release
+
+[33mcommit ce7c32fecef36afdf73cd0a15236ae58d35312c3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;33mtag: [m[1;33mv1.0[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Saeid Anwari <malizai71011@gmail.com>
+Date:   Mon Aug 31 01:30:34 2026 -0400
+
+    First commit - commiting all files to the repository
+
+[1mdiff --git a/rock,paper,sc.py b/rock,paper,sc.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..dd2df4b[m
+[1m--- /dev/null[m
+[1m+++ b/rock,paper,sc.py[m
+[36m@@ -0,0 +1,41 @@[m
+[32m+[m[32mimport random[m
+[32m+[m
+[32m+[m[32muser_wins = 0[m
+[32m+[m[32mcomputer_wins = 0[m
+[32m+[m
+[32m+[m[32moption=['rock', 'paper', 'scissors'][m
+[32m+[m
+[32m+[m[32mwhile True:[m
+[32m+[m[32m    users_input= input('Type Rock/Paper/Scissors or Q to quit.').lower()[m
+[32m+[m[41m    [m
+[32m+[m[32m    if users_input =='q':[m
+[32m+[m[32m        break[m
+[32m+[m[32m    if users_input not in ['rock', 'paper', 'scissors']:[m
+[32m+[m[32m        print ("Invalid input")[m
+[32m+[m[32m        continue[m
+[32m+[m
+[32m+[m[32m    random_number = random.randint(0, 2)[m
+[32m+[m[32m    #rock:0, paper:1, scissors:2[m
+[32m+[m
+[32m+[m[32m    computer_pick = option[random_number][m
+[32m+[m[32m    print('computer pick', computer_pick + '.')[m
+[32m+[m
+[32m+[m[32m    if users_input == 'rock' and computer_pick == 'scissors':[m
+[32m+[m[32m        print('YOU win!')[m
+[32m+[m[32m        user_wins +=1[m
+[32m+[m[32m        continue[m
+[32m+[m[32m    elif users_input == 'scissors' and computer_pick == 'paper':[m
+[32m+[m[32m        print('YOU win!')[m
+[32m+[m[32m        user_wins +=1[m
+[32m+[m[32m        continue[m
+[32m+[m[32m    elif users_input == 'paper' and computer_pick == 'rock':[m
+[32m+[m[32m        print('YOU win!')[m
+[32m+[m[32m        user_wins +=1[m
+[32m+[m[32m        continue[m
+[32m+[m
+[32m+[m[32m    else:[m
+[32m+[m[32m        print('YOU lost')[m
+[32m+[m[32m        computer_wins +=1[m
+[32m+[m
+[32m+[m[32mprint("you won", user_wins,'times')[m
+[32m+[m[32mprint('computer won', computer_wins, 'times')[m
